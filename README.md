@@ -211,3 +211,8 @@ bun test
 MIT © 2025
 
 ---
+
+HALL OF FAME:
+Things that helped us build this:
+https://github.com/sxyazi/yazi
+Suggested by green333221
