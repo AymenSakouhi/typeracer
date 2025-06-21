@@ -1,7 +1,7 @@
+import Typewriter from "@/components/shared/typewriter";
+
 export default function Home() {
   return (
-    <h1 className="font-roboto-mono underline text-3xl font-bold">
-      Whereas disregard and
-    </h1>
+    <Typewriter text={"hello world I am a typewriter typing hello world"} />
   );
 }

@@ -216,3 +216,7 @@ HALL OF FAME:
 Things that helped us build this:
 https://github.com/sxyazi/yazi
 Suggested by green333221
+
+to check this animation package:
+https://gsap.com/, it is also free
+Suggested by Tanveer

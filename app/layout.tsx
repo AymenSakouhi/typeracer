@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Roboto_Mono } from "next/font/google";
+import { Oxanium, Source_Code_Pro } from "next/font/google";
 import "./globals.css";
 
-const robotoMono = Roboto_Mono({
-  variable: "--font-roboto-mono",
+const oxanium = Oxanium({
+  variable: "--font-sans",
+});
+
+const sourceCodePro = Source_Code_Pro({
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -19,7 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${robotoMono.variable} antialiased`}>{children}</body>
+      <body
+        className={`${oxanium.variable} ${sourceCodePro.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
