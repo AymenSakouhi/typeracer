@@ -14,25 +14,31 @@ import { usePathname } from "next/navigation";
 
 export default function BreadcrumbLi() {
   const pathname = usePathname();
+  console.log(pathname);
   const pathNamesArr = pathname.split("/").filter(Boolean);
+  console.log(pathNamesArr);
 
   return (
     <Breadcrumb>
       <BreadcrumbList>
-        {pathNamesArr.map((item) => (
+        {pathNamesArr.map((item, idx) => (
           <React.Fragment key={item}>
             <BreadcrumbItem className="group">
               <BreadcrumbLink
-                className="group-not-last:hidden"
-                href={`/${item}`}
+                className={`cursor-pointer ${idx === pathNamesArr.length - 1 ? "hidden" : "block"}`}
+                href={`/${pathNamesArr
+                  .slice(0, pathNamesArr.indexOf(item) + 1)
+                  .join("/")}`}
               >
                 {item}
               </BreadcrumbLink>
-              <BreadcrumbPage className="group-last:block">
+              <BreadcrumbPage
+                className={`${idx === pathNamesArr.length - 1 ? "block" : "hidden"}`}
+              >
                 {item}
               </BreadcrumbPage>
             </BreadcrumbItem>
-            <BreadcrumbSeparator className="hidden md:block last:hidden" />
+            <BreadcrumbSeparator className="last:hidden" />
           </React.Fragment>
         ))}
       </BreadcrumbList>
