@@ -14,9 +14,7 @@ import { usePathname } from "next/navigation";
 
 export default function BreadcrumbLi() {
   const pathname = usePathname();
-  console.log(pathname);
   const pathNamesArr = pathname.split("/").filter(Boolean);
-  console.log(pathNamesArr);
 
   return (
     <Breadcrumb>
