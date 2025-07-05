@@ -38,5 +38,5 @@ export const signupSchema = z
     }
   })
 
-export type SigninSchema = z.infer<typeof signinSchema>
-export type SininSchema = z.infer<typeof signupSchema>
+export type SigninFormType = z.infer<typeof signinSchema>
+export type SignupFormType = z.infer<typeof signupSchema>
