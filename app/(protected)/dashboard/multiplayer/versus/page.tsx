@@ -1,5 +1,5 @@
 const page = () => {
-  return <div>coop</div>;
+  return <div>Versus</div>;
 };
 
 export default page;
